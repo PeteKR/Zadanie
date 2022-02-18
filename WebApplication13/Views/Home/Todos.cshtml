@@ -1,0 +1,23 @@
+﻿@model List<WebApplication13.Models.Todo>
+@{
+    ViewBag.Title = "Todos";
+}
+
+<h2>Todos</h2>
+<table border="1" cellpadding="2" align="center">
+    <tr align="center">
+        <td><h3>UserID</h3></td>
+        <td><h3>Id</h3></td>
+        <td><h3>Title</h3></td>
+        <td><h3>Completed</h3></td>
+    </tr>
+    @foreach (var row in Model)
+    {
+        <tr align="center">
+            <td>@row.UserId</td>
+            <td>@row.Id</td>
+            <td>@row.Title</td>
+            <td>@row.Completed</td>
+        </tr>
+    }
+</table>

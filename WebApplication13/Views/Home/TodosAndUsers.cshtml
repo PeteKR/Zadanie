@@ -1,0 +1,26 @@
+﻿@model List<WebApplication13.Models.UsersTodo>
+
+@{
+    ViewBag.Title = "UsersTodo";
+}
+
+<h2>Todos</h2>
+<table border="1" cellpadding="2" align="center">
+    <tr align="center">
+        <td><h3>Id</h3></td>
+        <td><h3>UserId</h3></td>
+        <td><h3>Name</h3></td>
+        <td><h3>Title</h3></td>
+        <td><h3>@Html.ActionLink("Completed?", "TodosAndUsers", new { sortOrder = ViewBag.CompletedSortParam })</h3></td>
+    </tr>
+    @foreach (var row in Model)
+    {
+        <tr align="center">
+            <td>@row.Id</td>
+            <td>@row.UserId</td>
+            <td>@row.Name</td>
+            <td>@row.Title</td>
+            <td>@row.Completed</td>
+        </tr>
+    }
+</table>
